@@ -1,0 +1,4 @@
+1. Country from long/lat
+2. Time of daay from hour info
+3. Season/time of year
+4. age/decade of birth/generation
