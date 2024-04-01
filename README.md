@@ -1,3 +1,3 @@
 # CS506 Midterm
-
-Please take a look at the starter code in the jupyter notebook.
+Code is fraud_models notebook
+Report is at CS506_midterm_report
