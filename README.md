@@ -8,7 +8,7 @@ https://www.kaggle.com/competitions/cs506-midterm-2024/leaderboard
  ## Finding Features
 My methodology for finding features to add to the model was was first to plot the base features to find any noticeable correlations with a fraudulent transaction. Through this I found that certain states, cities, merchants, transaction categories, and city populations all had noticeably higher rates of credit card fraud.
 
-Noticeable observations included:
+Notable observations included:
 - Fraudulent transactions seem to only happen at amounts below about $1500
 
 - Fraudulent transactions are less likely to happen in cities with large population
