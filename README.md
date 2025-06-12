@@ -32,14 +32,13 @@ Notable observations included:
 
 - Info on past/future fraudulent transactions - Multiple features indicating whether there was a fraudulent transaction on this card in the prior day, prior 3 hours, prior hour, next hour, next 3 hours. As well as the time of the most recent fraudulent transaction prior to this one if any. My logic for this variable was that fraudulent transactions would most likely happen close together and therefore if a fraudulent transaction happened in a short frame of time before or after this transaction then there is a high likelihood that this transaction is also fraudulent 
 
+## Findings
 Overall key findings I found about the dataset through these created features were:
-\begin{itemize}
-\item Fraud is overwhelmingly more likely to happen between 10 p.m. and 4 a.m.
-\item Fraud is less likely to happen on Monday/Tuesday then the rest of the week
-\item Airline credit card are most likely to have fraudulent transactions
-\item People between the ages of 50-70 are scignificantly more likely to have fraudulent transactions happen on thier credit card
-\item Fraudulent transaction happening in a short time before or after a given transaction results in that transaction being overwhelmingly (Near $100\%$) likely to be fraudulent
-\end{itemize}
+- Fraud is overwhelmingly more likely to happen between 10 p.m. and 4 a.m.
+- Fraud is less likely to happen on Monday/Tuesday then the rest of the week
+- Airline credit card are most likely to have fraudulent transactions
+- People between the ages of 50-70 are scignificantly more likely to have fraudulent transactions happen on thier credit card
+- Fraudulent transaction happening in a short time before or after a given transaction results in that transaction being overwhelmingly (Near $100\%$) likely to be fraudulent
 
 Plots exploring the correlation between these features and the probability of a transaction being fraudulent are located in the jupyter notebook for my model.
 
