@@ -17,24 +17,20 @@ Notable observations included:
 
 - Connecticut, Hawaii, Alaska, and Idaho all have scignificantly higher rates than average of credit card fraud
 
+ My second method for finding features was to use intuition about what types of things might indicate a transaction being fraudulent and creating a new feature to represent that. With this method I extracted the following features:
+- MII - The first digit of the credit number that indicates the industry/card issuer. My logic for this was that people using credit cards for certain issuers might be more prone to having thier information stolen or that certain card types might be less secure.
 
- My second method for finding features was to use intuition about what types of things might indicate a transaction being fraudulent and creating a new feature to represent that. Through thsi I made features for \\
- \begin{itemize}
-\item MII - The first digit of the credit number that indicates the industry/card issuer. My logic for this was that people using credit cards for certain issuers might be more prone to having thier information stolen or that certain card types might be less secure.
+- Hour - Fraudulent transactions might occur more at certain times of the day
 
-\item Hour - Fraudulent transactions might occur more at certain times of the day
+- High Risk City, State, Merchant - Features indicating if this transaction was made in a city/state or with a merchant that has a higher than normal rate of fraud
 
-\item High Risk City, State, Merchant - Features indicating if this transaction was made in a city/state or with a merchant that has a higher than normal rate of fraud
+- Weekday - Fraudulent trnsactions might occur more or less on certain days of the week. Ultimately the only feature that improved model performance was whether the transaction happened on a Sunday.
 
-\item Weekday - Fraudulent trnsactions might occur more or less on certain days of the week. Ultimately the only feature that improved model performance was whether the transaction happened on a Sunday.
+- Age decade, Age - Certain age groups might be more prone to having thier cc information stolen
 
-\item Age decade, Age - Certain age groups might be more prone to having thier cc information stolen
+- Distance - Distance between the card issuers address and the merchant, transactions further away from the owners address might be more likely to be fraudulent.
 
-\item Distance - Distance between the card issuers address and the merchant, transactions further away from the owners address might be more likely to be fraudulent.
-
-\item Info on past/future fraudulent transactions - Multiple features indicating whether there was a fraudulent transaction on this card in the prior day, prior 3 hours, prior hour, next hour, next 3 hours. As well as the time of the most recent fraudulent transaction prior to this one if any. My logic for this variable was that fraudulent transactions would most likely happen close together and therefore if a fraudulent transaction happened in a short frame of time before or after this transaction then there is a high likelihood that this transaction is also fraudulent 
-
- \end{itemize}
+- Info on past/future fraudulent transactions - Multiple features indicating whether there was a fraudulent transaction on this card in the prior day, prior 3 hours, prior hour, next hour, next 3 hours. As well as the time of the most recent fraudulent transaction prior to this one if any. My logic for this variable was that fraudulent transactions would most likely happen close together and therefore if a fraudulent transaction happened in a short frame of time before or after this transaction then there is a high likelihood that this transaction is also fraudulent 
 
 Overall key findings I found about the dataset through these created features were:
 \begin{itemize}
