@@ -3,8 +3,6 @@ Code and report for the model that won first place in CS 506 (Data Science Tools
 Code is fraud_models notebook  
 Report is at CS506_midterm_report
 
-https://www.kaggle.com/competitions/cs506-midterm-2024/leaderboard
-
  ## Analysis
 My methodology for finding features to add to the model was was first to plot the base features to find any noticeable correlations with a fraudulent transaction. Through this I found that certain states, cities, merchants, transaction categories, and city populations all had noticeably higher rates of credit card fraud.
 
@@ -53,3 +51,7 @@ A problem that I encountered was in using the information about past/future frau
  Furthermore, I used a soft-voting ensemble of models with slight changes in hyper parameters between each model to prevent over fitting. I found when training the models that unweighted models (models that treat fraudulent and non fraudulent transactions as the same when training) tend to have a better false positive rate while weighted models (models that add more significance to fraudulent transactions when training to account for the dataset imbalance) tend to have a better false negative rate, therefore in order to balance out my predictions and improve F1 score I split the ensemble between weighted and unweighted models.
 
  To validate my ensemble I split off 25% of the training data prior to training and used it as a testing set, I used F1 as the score to judge which parameters/models were the best as thats what is used for the competition.
+
+ ## Results
+ My final model achieved an f1 score of 99%, accurately classifying all but 4 of 60,000+ data points in the training set. The model achieved first place out of 150 in the class kaggle competition.
+ https://www.kaggle.com/competitions/cs506-midterm-2024/leaderboard
